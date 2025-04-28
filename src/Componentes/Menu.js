@@ -10,40 +10,30 @@ import Pokemon from './src/Componentes/Pokemon';
 import { TapGesture } from 'react-native-gesture-handler/lib/typescript/handlers/gestures/tapGesture';
 import { createStackNavigator } from '@react-navigation/stack';
 
-
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 function ListaStack() {
-  return (
+    return (
     <Stack.Navigator>
-      <Stack.Screen name="Lista" component={Listas} />
-      <Stack.Screen name="Pokemon" component={Pokemon} />
+    <Stack.Screen name="Lista" component={Listas} />
+    <Stack.Screen name="Pokemon" component={Pokemon} />
     </Stack.Navigator>
-  );
-}
-function FavoritosStack() {
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Favoritos" component={Favoritos} />
-      <Stack.Screen name="Pokemon" component={Pokemon} />
-    </Stack.Navigator>
-  );
-}
-
-
+    );
+   }
+   
 
 export default function App() {
-  return (
-    <AppProvider>
-      <NavigationContainer>
-        <Tab.Navigator>
-          <Tap.Screen name="ListaStack" component={ListaStack} />
-          <Tap.Screen name="Aleatorios" component={Aleatorios} />
-          <Tap.Screen name="Capturados" component={Capturados} />
-          <Tap.Screen name="Favoritos" component={FavoritosStack} />
-          <Tap.Screen name="Usuario" component={Usuarios} />
-        </Tab.Navigator>
-      </NavigationContainer>
-    </AppProvider>
-  );
+    return (
+
+        <NavigationContainer>
+            <Tab.Navigator>
+                <Tap.Screen name="ListaStack" component={ListaStack} />
+                <Tap.Screen name="Aleatorios" component={Aleatorios} />
+                <Tap.Screen name="Capturados" component={Capturados} />
+                <Tap.Screen name="Favoritos" component={Favoritos} />
+                <Tap.Screen name="Usuario" component={Usuarios} />
+            </Tab.Navigator>
+        </NavigationContainer>
+
+    );
 }
