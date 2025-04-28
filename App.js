@@ -7,7 +7,6 @@ import Favoritos from './src/Componentes/Favoritos';
 import Listas from './src/Componentes/Listas';
 import Usuarios from './src/Componentes/Usuarios';
 import Pokemon from './src/Componentes/Pokemon';
-import { TapGesture } from 'react-native-gesture-handler/lib/typescript/handlers/gestures/tapGesture';
 import { createStackNavigator } from '@react-navigation/stack';
 
 
@@ -37,11 +36,11 @@ export default function App() {
     <AppProvider>
       <NavigationContainer>
         <Tab.Navigator>
-          <Tap.Screen name="ListaStack" component={ListaStack} />
-          <Tap.Screen name="Aleatorios" component={Aleatorios} />
-          <Tap.Screen name="Capturados" component={Capturados} />
-          <Tap.Screen name="Favoritos" component={FavoritosStack} />
-          <Tap.Screen name="Usuario" component={Usuarios} />
+          <Tab.Screen name="ListaStack" component={ListaStack} />
+          <Tab.Screen name="Aleatorios" component={Aleatorios} />
+          <Tab.Screen name="Capturados" component={Capturados} />
+          <Tab.Screen name="Favoritos" component={FavoritosStack} />
+          <Tab.Screen name="Usuario" component={Usuarios} />
         </Tab.Navigator>
       </NavigationContainer>
     </AppProvider>
